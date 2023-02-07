@@ -8,26 +8,36 @@ class Obs < Formula
   version "0.9.0"
 
   on_macos do
-    url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.9.0/obsidian-cli_0.9.0_darwin_all.tar.gz"
-    sha256 "8cfaecfefdcd701b324dedc984aeb93ac22646c511f79f8ce21a51c825c716c2"
-
-    def install
-      bin.install "obsidian-cli"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.9.0/obsidian-cli_0.9.0_linux_arm64.tar.gz"
-      sha256 "5698a4a08a88cd8baf0a955c595a4264cff26d3ab157eea17388998eb076bc1c"
+    if Hardware::CPU.arm?
+      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.9.0/obsidian-cli_0.9.0_darwin_arm64.tar.gz"
+      sha256 "7d0f00f8689172d039cadbd7c05cbe626891178257ff274b51640340f95f2a0f"
 
       def install
         bin.install "obs"
       end
     end
     if Hardware::CPU.intel?
+      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.9.0/obsidian-cli_0.9.0_darwin_amd64.tar.gz"
+      sha256 "05d36b76f8584515f5122e999c4480c586a36fe5692283534f1a3219d238d625"
+
+      def install
+        bin.install "obs"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel?
       url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.9.0/obsidian-cli_0.9.0_linux_amd64.tar.gz"
-      sha256 "c0ba160c20da1cc8d79c4c0803f8549c5d174e3c88a4480fc38ec343ebf898d3"
+      sha256 "bd557aa06a5032ba38cdf3cd2ffb8fd881dd25858acab5f1b912a6ec36d5ceea"
+
+      def install
+        bin.install "obs"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.9.0/obsidian-cli_0.9.0_linux_arm64.tar.gz"
+      sha256 "e9890afb57d64f7e151e209741ba188df796b8084663fccc2b290e7085784245"
 
       def install
         bin.install "obs"
