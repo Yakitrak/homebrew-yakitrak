@@ -5,20 +5,20 @@
 class Obs < Formula
   desc ""
   homepage "https://github.com/Yakitrak/obsidian-cli"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.1/obsidian-cli_0.1.1_darwin_arm64.tar.gz"
-      sha256 "a5a4bbd5924a72163e3236711b42e4a410690c6df5aef6e92de1880d56609a89"
+    if Hardware::CPU.intel?
+      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.2/obsidian-cli_0.1.2_darwin_amd64.tar.gz"
+      sha256 "9b687c405d619cb6934f5a833d4aa673e4c135dad2e74ed895a85bef3cee6d3c"
 
       def install
         bin.install "obs"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.1/obsidian-cli_0.1.1_darwin_amd64.tar.gz"
-      sha256 "f8d5394d89334e101734ff6e4ad07c69b3bb816cf3c76208c6d4e7d0016e3681"
+    if Hardware::CPU.arm?
+      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.2/obsidian-cli_0.1.2_darwin_arm64.tar.gz"
+      sha256 "1781552c145a170ea60d83fee10246ebe6a3fc48b8132f5d36edb1c8a736bc13"
 
       def install
         bin.install "obs"
@@ -28,16 +28,16 @@ class Obs < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.1/obsidian-cli_0.1.1_linux_arm64.tar.gz"
-      sha256 "27f98d3a9ac24c43357d984ae3bdfe5e43f6042d5b53a177402b828a2bba7208"
+      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.2/obsidian-cli_0.1.2_linux_arm64.tar.gz"
+      sha256 "10a113b8da6423e649ead3e36803f034fae237e1f3807baa4a7b41fbb11c46da"
 
       def install
         bin.install "obs"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.1/obsidian-cli_0.1.1_linux_amd64.tar.gz"
-      sha256 "bb7c9884e0d00f055714050198c572680d59c7ff9b09aff598f7a19fe45aed9b"
+      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.2/obsidian-cli_0.1.2_linux_amd64.tar.gz"
+      sha256 "5868851a8d1b609b26a83f10a3c6dca58c48d79dfed53f6f97a1069105413224"
 
       def install
         bin.install "obs"
