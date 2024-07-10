@@ -13,7 +13,7 @@ class Obs < Formula
       sha256 "868480dc025af31b724a987d071ad38fd139ceda00a944518a47371d5ac4f3a9"
 
       def install
-        bin.install "obs"
+        bin.install "obsidian-cli"
       end
     end
     if Hardware::CPU.intel?
@@ -21,7 +21,7 @@ class Obs < Formula
       sha256 "1293e8a692b893c66cdacd8436d118dc217e96bc4d14ee87ff46edde138584dc"
 
       def install
-        bin.install "obs"
+        bin.install "obsidian-cli"
       end
     end
   end
@@ -32,7 +32,7 @@ class Obs < Formula
       sha256 "37c7c9fa2dc2dd115f412bb0cc79ddc8ff203972eebc3a5b22fe3c233c73d3fd"
 
       def install
-        bin.install "obs"
+        bin.install "obsidian-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
@@ -40,7 +40,7 @@ class Obs < Formula
       sha256 "cc52eb27dd8a03bb9b44232c968511bc8475d6e5c96808af8e8b92fdef89a170"
 
       def install
-        bin.install "obs"
+        bin.install "obsidian-cli"
       end
     end
   end
