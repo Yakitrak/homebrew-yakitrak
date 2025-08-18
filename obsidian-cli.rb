@@ -5,11 +5,11 @@
 class ObsidianCli < Formula
   desc ""
   homepage "https://github.com/Yakitrak/obsidian-cli"
-  version "0.1.8"
+  version "0.1.9"
 
   on_macos do
-    url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.8/obsidian-cli_0.1.8_darwin_all.tar.gz"
-    sha256 "78b6c7829528be9169ec9fa372dca0cf16928d411dab2f92830422c1c4eeeba2"
+    url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.9/obsidian-cli_0.1.9_darwin_all.tar.gz"
+    sha256 "a26eb00019d7390b6eb768a23c8385a1c3b14a5d642a8d8984927643f9a9246e"
 
     def install
       bin.install "obsidian-cli"
@@ -17,24 +17,18 @@ class ObsidianCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.8/obsidian-cli_0.1.8_linux_amd64.tar.gz"
-        sha256 "7925b1082b36a88775ff3a61b332788e6cc7e594d14a061169f2443128d2018b"
-
-        def install
-          bin.install "obsidian-cli"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.9/obsidian-cli_0.1.9_linux_amd64.tar.gz"
+      sha256 "f93479b3530387f662b46e4844aa409f7108ee7562c4e906a74bb64f12479e9d"
+      def install
+        bin.install "obsidian-cli"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.8/obsidian-cli_0.1.8_linux_arm64.tar.gz"
-        sha256 "87e9a3f5b71964a73ec166b82dcd9fd5b3c354d0156a9be08e4906b89bd0bd9e"
-
-        def install
-          bin.install "obsidian-cli"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/Yakitrak/obsidian-cli/releases/download/v0.1.9/obsidian-cli_0.1.9_linux_arm64.tar.gz"
+      sha256 "7e01cd540364a44715ae1c51e50636a9f425ec727b137242b89126257688d80f"
+      def install
+        bin.install "obsidian-cli"
       end
     end
   end
