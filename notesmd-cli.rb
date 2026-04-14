@@ -5,11 +5,11 @@
 class NotesmdCli < Formula
   desc ""
   homepage "https://github.com/Yakitrak/notesmd-cli"
-  version "0.3.4"
+  version "0.3.5"
 
   on_macos do
-    url "https://github.com/Yakitrak/notesmd-cli/releases/download/v0.3.4/notesmd-cli_0.3.4_darwin_all.tar.gz"
-    sha256 "9c7fa8917656586b21230cbc5c4002e653811c460c63113ab1057607de93faa4"
+    url "https://github.com/Yakitrak/notesmd-cli/releases/download/v0.3.5/notesmd-cli_0.3.5_darwin_all.tar.gz"
+    sha256 "ed33cfed317c55e2a921b255f68c83e4f6b7c3169297f8811b7fa3789dd653ed"
 
     define_method(:install) do
       bin.install "notesmd-cli"
@@ -18,15 +18,15 @@ class NotesmdCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Yakitrak/notesmd-cli/releases/download/v0.3.4/notesmd-cli_0.3.4_linux_amd64.tar.gz"
-      sha256 "a261198233a50a3134f300236c618f4f3bff7574bf82df05ffb69da0a308d9b6"
+      url "https://github.com/Yakitrak/notesmd-cli/releases/download/v0.3.5/notesmd-cli_0.3.5_linux_amd64.tar.gz"
+      sha256 "8d41ffb2343ae85bab27be510d82b72518ffdf5d470a7968a9c34f391ef756ab"
       define_method(:install) do
         bin.install "notesmd-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Yakitrak/notesmd-cli/releases/download/v0.3.4/notesmd-cli_0.3.4_linux_arm64.tar.gz"
-      sha256 "0395b2e496f0aa3c202aee9e33c8029fa7cde38eff454e7f4cfd1c1ccaff370e"
+      url "https://github.com/Yakitrak/notesmd-cli/releases/download/v0.3.5/notesmd-cli_0.3.5_linux_arm64.tar.gz"
+      sha256 "7dc3a619d029fd7bb240a6aa3902ef288838038f30001f00c2eca2bd93dc2f75"
       define_method(:install) do
         bin.install "notesmd-cli"
       end
