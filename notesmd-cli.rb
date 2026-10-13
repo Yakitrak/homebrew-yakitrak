@@ -5,7 +5,6 @@
 class NotesmdCli < Formula
   desc ""
   homepage "https://github.com/Yakitrak/notesmd-cli"
-  version "0.3.8"
 
   on_macos do
     url "https://github.com/Yakitrak/notesmd-cli/releases/download/v0.3.8/notesmd-cli_0.3.8_darwin_all.tar.gz"
